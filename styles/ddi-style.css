@@ -1,0 +1,50 @@
+.nav-header {
+    display: flex;
+}
+
+.nav-bar {
+    margin: 0 auto;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-list li {
+    padding: 2rem 0;
+    margin: 1rem;
+    list-style: none;
+    flex: none;
+}
+
+.main-body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.left-1 {
+    flex: none;
+    margin: 2rem;
+}
+
+.right-1 {
+    flex: none;
+    margin: 2rem;
+}
+
+.body-image {
+    border: black solid 2px;
+    border-radius: .5em;
+    background: url(../media/cathedral.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+}
