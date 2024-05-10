@@ -1,9 +1,24 @@
+/* HEADER STYLES */
+
+.info-header {
+    background-color: #333343;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: solid #333343;
+    border-radius: .5em;
+    text-align: center;
+}
+
 .nav-header {
     display: flex;
+    justify-content: center;
+    border-bottom: 4px solid #2E3192;
 }
 
 .nav-bar {
-    margin-left: 1.5rem;
+    display: flex;
 }
 
 .nav-list {
@@ -16,8 +31,7 @@
 }
 
 .nav-list li {
-    padding: 2rem 0;
-    margin: 1rem;
+    padding: 2rem;
     list-style: none;
     flex: none;
     font-family: Helvetica, Arial, sans-serif;
@@ -26,6 +40,7 @@
 }
 
 .nav-list a {
+    color: #2E3192;
     text-decoration: none;
 }
 
@@ -36,10 +51,16 @@
     border-top: 4px solid #2E3192;
 }
 
-.main-body {
+/* BODY STYLES */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.body-1 {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -58,6 +79,17 @@
     border-radius: .5em;
 }
 
+.right-1 h1, h2, h3 {
+    text-align: center;
+}
+
+.main-body {
+    display: flex;
+    justify-content: center;
+}
+
+/* IMAGE STYLES */
+
 .body-image {
     border: black solid 2px;
     border-radius: .5em;
@@ -67,4 +99,42 @@
     background-size: cover;
     width: 600px;
     height: 400px;
+}
+
+.header-image {
+    padding: 2rem;
+}
+
+/* CONTENT BOXES */
+
+.content-box {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "image txt";
+    grid-gap: 20px;
+    max-width: 50rem;
+}
+
+.content-box-bizarro {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "txt image";
+    grid-gap: 20px;
+    max-width: 50rem;
+}
+
+.content-box-image {
+    grid-area: image;
+}
+
+.content-box-image img {
+    max-width: 20rem;
+}
+
+.content-box-text {
+    grid-area: txt;
 }
