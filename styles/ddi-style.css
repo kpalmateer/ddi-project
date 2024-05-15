@@ -1,14 +1,18 @@
 /* HEADER STYLES */
 
 .info-header {
-    background-color: #333343;
+    background-color: #3C3840;
     color: white;
     font-family: Helvetica, Arial, sans-serif;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     border: solid #333343;
-    border-radius: .5em;
+    border-radius: .3rem;
     text-align: center;
+}
+
+.info-header h1 {
+    margin-top: .3rem;
+    margin-bottom: .1rem;
+    font-size: 2rem;
 }
 
 .nav-header {
@@ -55,32 +59,7 @@
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-
-}
-
-.body-1 {
-    display: flex;
-    justify-content: center;
-    font-family: Helvetica, Arial, sans-serif;
-}
-
-.left-1 {
-    flex: none;
-    margin: 2rem;
-}
-
-.right-1 {
-    flex: none;
-    margin: 2rem;
-    background-color: #2E3192;
-    color: white;
-    padding: .5rem;
-    border: #2E3192 solid 1px;
-    border-radius: .5em;
-}
-
-.right-1 h1, h2, h3 {
-    text-align: center;
+    background-color: #F2F2F2;
 }
 
 .main-body {
@@ -90,19 +69,8 @@ body {
 
 /* IMAGE STYLES */
 
-.body-image {
-    border: black solid 2px;
-    border-radius: .5em;
-    background: url(../media/cathedral.jpg);
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 600px;
-    height: 400px;
-}
-
 .header-image {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 /* CONTENT BOXES */
@@ -110,11 +78,37 @@ body {
 .content-box {
     margin: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    grid-template-areas: "image txt";
+    grid-template-columns: minmax(auto, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "img-hd txt-hd"
+        "image txt";
     grid-gap: 20px;
     max-width: 50rem;
+    background-color: #D7D7D9;
+    padding: .5rem;
+    border: black solid 0px;
+    border-radius: .3rem;
+}
+
+@media screen and (max-width: 800px) {
+    .content-box {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: minmax(auto, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+         "img-hd"
+         "image"
+         "txt-hd"
+         "txt";
+        grid-gap: 20px;
+        max-width: 50rem;
+        background-color: #D7D7D9;
+        padding: .5rem;
+        border: black solid 0px;
+        border-radius: .3rem;
+    }
 }
 
 .content-box-bizarro {
@@ -127,14 +121,55 @@ body {
     max-width: 50rem;
 }
 
+.content-box-text-blue {
+    border: black solid 0px;
+    border-radius: .3rem;
+    grid-area: txt;
+    background-color: #8CB8FF;
+    color: white;
+    padding: .5rem;
+}
+
 .content-box-image {
     grid-area: image;
+    align-content: center;
 }
 
 .content-box-image img {
-    max-width: 20rem;
+    width: 20rem;
+    height: auto;
+    border: black solid 0px;
+    border-radius: .3rem;
 }
 
 .content-box-text {
     grid-area: txt;
+}
+
+.cb-img-hd {
+    grid-area: img-hd;
+    text-align: center;
+}
+
+.cb-txt-hd {
+    grid-area: txt-hd;
+    text-align: center;
+}
+
+/* FOOTER */
+
+.main-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+    "name loc"
+    "num email";
+    grid-gap: 30px;
+    max-width: 50rem;
 }
