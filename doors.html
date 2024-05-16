@@ -2,114 +2,120 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Don Dor > Home</title>
-    <link href="styles/ddi-style.css" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Don Dor > Home</title>
+  <link href="styles/ddi-style.css" rel="stylesheet" />
 </head>
 
 <!-- BODY STARTS HERE -->
 
 <body>
 
-    <div class="content-wrap">
+  <div class="content-wrap">
 
     <!-- HEADER STARTS HERE -->
 
     <div class="hdr-wrp">
-    <header class="info-header">
+      <header class="info-header">
         <h1>CALL 651-702-0984 FOR SERVICE</h1>
-    </header>
+      </header>
 
-    <header class="nav-header">
+      <header class="nav-header">
         <div class="hdr-img" id="hdr-img">
-            <img alt="logo" src="media/DonDorLogoPlain.svg" width="100">
+          <img alt="logo" src="media/DonDorLogoPlain.svg" width="100">
         </div>
         <nav class="nav-bar">
-            <ul class="nav-list" id="nav-list">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="doors.html">GARAGE DOORS</a></li>
-                <li><a href="openers.html">OPENERS</a></li>
-            </ul>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="doors.html">GARAGE DOORS</a></li>
+            <li><a href="openers.html">OPENERS</a></li>
+          </ul>
         </nav>
         <div class="nav-btn" id="nav-btn">
-            <span class="nav-btn-ln" id="nav-btn-ln"></span>
-            <span class="nav-btn-ln" id="nav-btn-ln"></span>
-            <span class="nav-btn-ln" id="nav-btn-ln"></span>
+          <span class="nav-btn-ln" id="nav-btn-ln"></span>
+          <span class="nav-btn-ln" id="nav-btn-ln"></span>
+          <span class="nav-btn-ln" id="nav-btn-ln"></span>
         </div>
-    </header>
+      </header>
     </div>
 
     <!-- MAIN STARTS HERE -->
 
     <main class="site-body" id="site-body">
-        <div class="main-body">
-          <div class="content-box">
-            <div class="content-box-image">
-              <a href="https://www.clopaydoor.com/"><img src="media/ClopayLogo.svg" alt="Clopay logo"></a>
-            </div>
-            <div class="content-box-text">
-              <p>We're proud to be an Authorized Clopay Dealer. Click on the logo to visit their website, and check back soon for more content.</p>
-            </div>
+      <div class="main-body">
+        <div class="cb-no-img-hd">
+          <div class="cb-img">
+          </div>
+          <div class="cb-img">
+            <a href="https://www.clopaydoor.com/"><img src="media/ClopayLogo.svg" alt="Clopay logo"></a>
+          </div>
+          <div class="cb-txt-hd">
+            <p>Clopay Doors</p>
+          </div>
+          <div class="cb-text">
+            <p>We're proud to be an Authorized Clopay Dealer. Click on the logo to visit their website, and check back
+              soon for more content.</p>
           </div>
         </div>
-        </div>
-    </main>
+      </div>
+  </div>
+  </main>
 
-    <!-- FOOTER STARTS HERE -->
+  <!-- FOOTER STARTS HERE -->
 
-    <footer class="main-footer">
-        <div class="nav-footer">
-            <div class="footer-name">
-                DON DOR INC
-            </div>
-            <div class="footer-loc">
-                OAKDALE, MN
-            </div>
-            <div class="footer-num">
-                651-702-0984
-            </div>
-            <div class="footer-email">
-                DONDORINC@GMAIL.COM
-            </div>
-        </div>
-    </footer>
+  <footer class="main-footer">
+    <div class="nav-footer">
+      <div class="footer-name">
+        DON DOR INC
+      </div>
+      <div class="footer-loc">
+        OAKDALE, MN
+      </div>
+      <div class="footer-num">
+        651-702-0984
+      </div>
+      <div class="footer-email">
+        DONDORINC@GMAIL.COM
+      </div>
     </div>
-</div>
+  </footer>
+  </div>
+  </div>
 </body>
 
 <!-- SCRIPTS START HERE -->
 
 <script>
-    const navButton = document.getElementById("nav-btn");
+  const navButton = document.getElementById("nav-btn");
 
-    function mobileLayout() {
-        var mobileNav = document.getElementById("nav-list");
-        var siteBody = document.getElementById("site-body");
-        var navBtn = document.getElementById("nav-btn");
+  function mobileLayout() {
+    var mobileNav = document.getElementById("nav-list");
+    var siteBody = document.getElementById("site-body");
+    var navBtn = document.getElementById("nav-btn");
 
-        if (siteBody.className === "site-body") {
-            siteBody.className = "site-body-hide";
-        } else {
-            siteBody.className = "site-body";
-        };
-
-        if (mobileNav.className === "nav-list") {
-            mobileNav.className = "nav-list-mob";
-        } else {
-            mobileNav.className = "nav-list";
-        };
-
-        if (navBtn.className === "nav-btn") {
-            navBtn.className = "nav-btn-on";
-        } else {
-            navBtn.className = "nav-btn";
-        };
+    if (siteBody.className === "site-body") {
+      siteBody.className = "site-body-hide";
+    } else {
+      siteBody.className = "site-body";
     };
 
-    navButton.addEventListener("click", () => {
-        mobileLayout()
-    });
+    if (mobileNav.className === "nav-list") {
+      mobileNav.className = "nav-list-mob";
+    } else {
+      mobileNav.className = "nav-list";
+    };
+
+    if (navBtn.className === "nav-btn") {
+      navBtn.className = "nav-btn-on";
+    } else {
+      navBtn.className = "nav-btn";
+    };
+  };
+
+  navButton.addEventListener("click", () => {
+    mobileLayout()
+  });
 
 </script>
 

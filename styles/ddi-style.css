@@ -158,14 +158,62 @@ body {
 
 /* CONTENT BOXES */
 
-.content-box {
+.cb {
     margin: 2rem;
     display: grid;
     grid-template-columns: minmax(auto, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "img-hd txt-hd"
-        "image txt";
+        "img txt";
+    grid-gap: 20px;
+    max-width: 50rem;
+    background-color: #D7D7D9;
+    padding: .5rem;
+    border: black solid 0px;
+    border-radius: .3rem;
+}
+
+.cb-bizarro {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "txt-hd img-hd"
+        "txt img";
+    grid-gap: 20px;
+    max-width: 50rem;
+    background-color: #D7D7D9;
+    padding: .5rem;
+    border: black solid 0px;
+    border-radius: .3rem;
+}
+
+.cb-no-img-hd {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: minmax(auto, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "img txt-hd"
+            "img txt";
+        grid-gap: 20px;
+        max-width: 50rem;
+        background-color: #D7D7D9;
+        padding: .5rem;
+        border: black solid 0px;
+        border-radius: .3rem;
+}
+
+.cb-bizarro-no-img-hd {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: minmax(auto, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "txt-hd img"
+        "txt img";
     grid-gap: 20px;
     max-width: 50rem;
     background-color: #D7D7D9;
@@ -175,7 +223,7 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-    .content-box {
+    .cb {
         margin: 1rem;
         display: grid;
         justify-items: center;
@@ -183,7 +231,7 @@ body {
         grid-template-rows: auto 1fr auto;
         grid-template-areas:
             "img-hd"
-            "image"
+            "img"
             "txt-hd"
             "txt";
         grid-gap: 20px;
@@ -193,40 +241,76 @@ body {
         border: black solid 0px;
         border-radius: .3rem;
     }
+
+    .cb-bizarro {
+        margin: 1rem;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: minmax(auto, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "img-hd"
+            "img"
+            "txt-hd"
+            "txt";
+        grid-gap: 20px;
+        width: 80vw;
+        background-color: #D7D7D9;
+        padding: .5rem;
+        border: black solid 0px;
+        border-radius: .3rem;
+    }
+
+    .cb-no-img-hd {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: minmax(auto, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "img"
+            "img"
+            "txt-hd" 
+            "txt";
+        grid-gap: 20px;
+        max-width: 50rem;
+        background-color: #D7D7D9;
+        padding: .5rem;
+        border: black solid 0px;
+        border-radius: .3rem;
+    }
+
+    .cb-bizarro-no-img-hd {
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: minmax(auto, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "img"
+            "img"
+            "txt-hd"
+            "txt";
+        grid-gap: 20px;
+        max-width: 50rem;
+        background-color: #D7D7D9;
+        padding: .5rem;
+        border: black solid 0px;
+        border-radius: .3rem;
+    }
 }
 
-.content-box-bizarro {
-    margin: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    grid-template-areas: "txt image";
-    grid-gap: 20px;
-    max-width: 50rem;
-}
-
-.content-box-text-blue {
-    border: black solid 0px;
-    border-radius: .3rem;
-    grid-area: txt;
-    background-color: #8CB8FF;
-    color: white;
-    padding: .5rem;
-}
-
-.content-box-image {
-    grid-area: image;
+.cb-img {
+    grid-area: img;
     align-content: center;
 }
 
-.content-box-image img {
+.cb-img img {
     width: 20rem;
     height: auto;
     border: black solid 0px;
     border-radius: .3rem;
 }
 
-.content-box-text {
+.cb-text {
     grid-area: txt;
 }
 
