@@ -1,33 +1,48 @@
 <!doctype html>
 <html lang="en-US">
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Don Dor > Home</title>
+    <link href="styles/ddi-style.css" rel="stylesheet" />
+</head>
+
+<!-- BODY STARTS HERE -->
+
 <body>
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Don Dor > Home</title>
-        <link href="styles/ddi-style.css" rel="stylesheet" />
-    </head>
+    <div class="content-wrap">
 
+    <!-- HEADER STARTS HERE -->
+
+    <div class="hdr-wrp">
     <header class="info-header">
         <h1>CALL 651-702-0984 FOR SERVICE</h1>
     </header>
+
     <header class="nav-header">
+        <div class="hdr-img" id="hdr-img">
+            <img alt="logo" src="media/DonDorLogoPlain.svg" width="100">
+        </div>
         <nav class="nav-bar">
-            <div class="header-image">
-                <img alt="logo" src="media/DonDorLogoPlain.svg" width="100">
-            </div>
-            <ul class="nav-list">
+            <ul class="nav-list" id="nav-list">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="doors.html">GARAGE DOORS</a></li>
                 <li><a href="openers.html">OPENERS</a></li>
             </ul>
         </nav>
+        <div class="nav-btn" id="nav-btn">
+            <span class="nav-btn-ln" id="nav-btn-ln"></span>
+            <span class="nav-btn-ln" id="nav-btn-ln"></span>
+            <span class="nav-btn-ln" id="nav-btn-ln"></span>
+        </div>
     </header>
+    </div>
 
-    <!-- BODY STARTS HERE -->
-    <main>
+    <!-- MAIN STARTS HERE -->
+
+    <main class="site-body" id="site-body">
         <div class="main-body">
             <div class="content-box">
                 <div class="cb-img-hd">
@@ -55,8 +70,8 @@
                 </div>
             </div>
         </div>
-        </div>
     </main>
+
     <!-- FOOTER STARTS HERE -->
 
     <footer class="main-footer">
@@ -75,7 +90,43 @@
             </div>
         </div>
     </footer>
+    </div>
+</div>
 </body>
 
+<!-- SCRIPTS START HERE -->
+
+<script>
+    const navButton = document.getElementById("nav-btn");
+
+    function mobileLayout() {
+        var mobileNav = document.getElementById("nav-list");
+        var siteBody = document.getElementById("site-body");
+        var navBtn = document.getElementById("nav-btn");
+
+        if (siteBody.className === "site-body") {
+            siteBody.className = "site-body-hide";
+        } else {
+            siteBody.className = "site-body";
+        };
+
+        if (mobileNav.className === "nav-list") {
+            mobileNav.className = "nav-list-mob";
+        } else {
+            mobileNav.className = "nav-list";
+        };
+
+        if (navBtn.className === "nav-btn") {
+            navBtn.className = "nav-btn-on";
+        } else {
+            navBtn.className = "nav-btn";
+        };
+    };
+
+    navButton.addEventListener("click", () => {
+        mobileLayout()
+    });
+
+</script>
 
 </html>

@@ -2,56 +2,114 @@
 <html lang="en-US">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Don Dor > Openers</title>
-  <link href="styles/ddi-style.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Don Dor > Home</title>
+    <link href="styles/ddi-style.css" rel="stylesheet" />
 </head>
 
+<!-- BODY STARTS HERE -->
+
 <body>
-  <header class="info-header">
-    <h1>CALL 651-702-0984 FOR SERVICE</h1>
-  </header>
-  <header>
-    <div class="nav-header">
-      <nav class="nav-bar">
-        <div class="header-image">
-          <img alt="Don Dor logo" src="media/DonDorLogoPlain.svg" width="100">
+
+    <div class="content-wrap">
+
+    <!-- HEADER STARTS HERE -->
+
+    <div class="hdr-wrp">
+    <header class="info-header">
+        <h1>CALL 651-702-0984 FOR SERVICE</h1>
+    </header>
+
+    <header class="nav-header">
+        <div class="hdr-img" id="hdr-img">
+            <img alt="logo" src="media/DonDorLogoPlain.svg" width="100">
         </div>
-        <ul class="nav-list">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="doors.html">GARAGE DOORS</a></li>
-          <li><a href="openers.html">OPENERS</a></li>
-        </ul>
-      </nav>
+        <nav class="nav-bar">
+            <ul class="nav-list" id="nav-list">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="doors.html">GARAGE DOORS</a></li>
+                <li><a href="openers.html">OPENERS</a></li>
+            </ul>
+        </nav>
+        <div class="nav-btn" id="nav-btn">
+            <span class="nav-btn-ln" id="nav-btn-ln"></span>
+            <span class="nav-btn-ln" id="nav-btn-ln"></span>
+            <span class="nav-btn-ln" id="nav-btn-ln"></span>
+        </div>
+    </header>
     </div>
-  </header>
-  <div class="main-body">
-    <div class="content-box-bizarro">
-      <div class="content-box-text">
-        <p>We offer LiftMaster openers, featuring Amazon's new Amazon Key In-Garage Delivery. Call for a quote or more information.</p>
-      </div>
-      <div class="content-box-image">
-        <a href="https://www.liftmaster.com/"><img src="media/LiftMasterLogo.svg" alt="LiftMaster logo"></a>
-      </div>
+
+    <!-- MAIN STARTS HERE -->
+
+    <main class="site-body" id="site-body">
+        <div class="main-body">
+          <div class="content-box-bizarro">
+            <div class="content-box-text">
+              <p>We offer LiftMaster openers, featuring Amazon's new Amazon Key In-Garage Delivery. Call for a quote or more information.</p>
+            </div>
+            <div class="content-box-image">
+              <a href="https://www.liftmaster.com/"><img src="media/LiftMasterLogo.svg" alt="LiftMaster logo"></a>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <!-- FOOTER STARTS HERE -->
+
+    <footer class="main-footer">
+        <div class="nav-footer">
+            <div class="footer-name">
+                DON DOR INC
+            </div>
+            <div class="footer-loc">
+                OAKDALE, MN
+            </div>
+            <div class="footer-num">
+                651-702-0984
+            </div>
+            <div class="footer-email">
+                DONDORINC@GMAIL.COM
+            </div>
+        </div>
+    </footer>
     </div>
-  </div>
+</div>
 </body>
-<footer class="main-footer">
-  <div class="nav-footer">
-    <div class="footer-name">
-      DON DOR INC
-    </div>
-    <div class="footer-loc">
-      OAKDALE, MN
-    </div>
-    <div class="footer-num">
-      651-702-0984
-    </div>
-    <div class="footer-email">
-      DONDORINC@GMAIL.COM
-    </div>
-  </div>
-</footer>
+
+<!-- SCRIPTS START HERE -->
+
+<script>
+    const navButton = document.getElementById("nav-btn");
+
+    function mobileLayout() {
+        var mobileNav = document.getElementById("nav-list");
+        var siteBody = document.getElementById("site-body");
+        var navBtn = document.getElementById("nav-btn");
+
+        if (siteBody.className === "site-body") {
+            siteBody.className = "site-body-hide";
+        } else {
+            siteBody.className = "site-body";
+        };
+
+        if (mobileNav.className === "nav-list") {
+            mobileNav.className = "nav-list-mob";
+        } else {
+            mobileNav.className = "nav-list";
+        };
+
+        if (navBtn.className === "nav-btn") {
+            navBtn.className = "nav-btn-on";
+        } else {
+            navBtn.className = "nav-btn";
+        };
+    };
+
+    navButton.addEventListener("click", () => {
+        mobileLayout()
+    });
+
+</script>
 
 </html>
