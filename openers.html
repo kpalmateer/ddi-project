@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en-US">
 
@@ -14,72 +16,69 @@
 
     <div class="content-wrap">
 
-    <!-- HEADER STARTS HERE -->
+        <!-- HEADER STARTS HERE -->
 
-    <div class="hdr-wrp">
-    <header class="info-header">
-        <h1>CALL 651-702-0984 FOR SERVICE</h1>
-    </header>
-
-    <header class="nav-header">
-        <div class="hdr-img" id="hdr-img">
-            <img alt="logo" src="media/DonDorLogoPlain.svg" width="100">
-        </div>
-        <nav class="nav-bar">
+        <header class="hdr">
+            <div class="hdr-info">
+                CALL 651-702-0984 FOR SERVICE
+            </div>
+            <div class="hdr-img" id="hdr-img">
+                <img alt="logo" src="media/DonDorLogoPlain.svg" width="100">
+            </div>
             <ul class="nav-list" id="nav-list">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="doors.html">GARAGE DOORS</a></li>
                 <li><a href="openers.html">OPENERS</a></li>
             </ul>
-        </nav>
-        <div class="nav-btn" id="nav-btn">
-            <span class="nav-btn-ln" id="nav-btn-ln"></span>
-            <span class="nav-btn-ln" id="nav-btn-ln"></span>
-            <span class="nav-btn-ln" id="nav-btn-ln"></span>
-        </div>
-    </header>
+            <div class="nav-ph" id="nav-ph"></div>
+            <div class="nav-btn" id="nav-btn">
+                <span class="nav-btn-ln" id="nav-btn-ln"></span>
+                <span class="nav-btn-ln" id="nav-btn-ln"></span>
+                <span class="nav-btn-ln" id="nav-btn-ln"></span>
+            </div>
+        </header>
+
+        <!-- MAIN STARTS HERE -->
+
+        <main class="site-body" id="site-body">
+            <div class="main-body" id="main-body">
+              <div class="cb-bizarro-no-img-hd">
+                <div class="cb-txt-hd">
+                  LiftMaster Openers
+                </div>
+                <div class="cb-txt">
+                  <p>We offer LiftMaster openers, featuring Amazon's new Amazon Key In-Garage Delivery. Call for a quote or more
+                    information.</p>
+                </div>
+                <div class="cb-img">
+                </div>
+                <div class="cb-img">
+                  <a href="https://www.liftmaster.com/"><img src="media/LiftMasterLogo.svg" alt="LiftMaster logo"></a>
+                </div>
+              </div>
+            </div>
+        </main>
+
+        <!-- FOOTER STARTS HERE -->
+
+        <footer class="ft-main">
+            <div class="ft-body">
+                <div class="ft-name">
+                    DON DOR INC
+                </div>
+                <div class="ft-loc">
+                    OAKDALE, MN
+                </div>
+                <div class="ft-ph">
+                    651-702-0984
+                </div>
+                <div class="ft-email">
+                    <a href="mailto:DONDORINC@GMAIL.COM">DONDORINC@GMAIL.COM</a>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <!-- MAIN STARTS HERE -->
-
-    <main class="site-body" id="site-body">
-        <div class="main-body">
-          <div class="cb-bizarro-no-img-hd">
-            <div class="cb-txt-hd">
-              LiftMaster Openers
-          </div>
-          <div class="cb-text">
-              <p>We offer LiftMaster openers, featuring Amazon's new Amazon Key In-Garage Delivery. Call for a quote or more information.</p>
-          </div>
-          <div class="cb-img">
-          </div>
-          <div class="cb-img">
-            <a href="https://www.liftmaster.com/"><img src="media/LiftMasterLogo.svg" alt="LiftMaster logo"></a>
-          </div>
-          </div>
-        </div>
-    </main>
-
-    <!-- FOOTER STARTS HERE -->
-
-    <footer class="main-footer">
-        <div class="nav-footer">
-            <div class="footer-name">
-                DON DOR INC
-            </div>
-            <div class="footer-loc">
-                OAKDALE, MN
-            </div>
-            <div class="footer-num">
-                651-702-0984
-            </div>
-            <div class="footer-email">
-                DONDORINC@GMAIL.COM
-            </div>
-        </div>
-    </footer>
     </div>
-</div>
 </body>
 
 <!-- SCRIPTS START HERE -->
@@ -89,13 +88,14 @@
 
     function mobileLayout() {
         var mobileNav = document.getElementById("nav-list");
-        var siteBody = document.getElementById("site-body");
+        var mainBody = document.getElementById("main-body");
         var navBtn = document.getElementById("nav-btn");
+        var navPh = document.getElementById("nav-ph");
 
-        if (siteBody.className === "site-body") {
-            siteBody.className = "site-body-hide";
+        if (mainBody.className === "main-body") {
+            mainBody.className = "main-body-hide";
         } else {
-            siteBody.className = "site-body";
+            mainBody.className = "main-body";
         };
 
         if (mobileNav.className === "nav-list") {
@@ -108,6 +108,11 @@
             navBtn.className = "nav-btn-on";
         } else {
             navBtn.className = "nav-btn";
+        };
+        if (navPh.className === "nav-ph") {
+            navPh.className = "nav-ph-hide";
+        } else {
+            navPh.className = "nav-ph";
         };
     };
 
