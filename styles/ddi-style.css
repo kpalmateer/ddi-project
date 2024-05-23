@@ -14,21 +14,43 @@ AAAAB6 - MD GRAY
 .hdr {
     display: flex;
     position: fixed;
-    height: 9.8rem;
+    height: 8rem;
     min-width: 100vw;
     background-color: #D9D9E0;
+}
+
+.hdr-name {
+    font-size: 3rem;
 }
 
 h1 {
     color: #2E3192;
     font-size: 3rem;
-    margin-top: 1.2rem;
-    margin-bottom: -.2rem;
 }
 
 h2 {
     color: #2E3192;
     font-size: 1.4rem;
+}
+
+h3 {
+    color: #2E3192;
+    font-size: 1.8rem;
+    font-family: 'Roboto Slab'; 
+}
+
+.h3-l {
+    text-align: left;
+}
+
+.h3-r {
+    text-align: right;
+}
+
+h4 {
+    color: #2E3192;
+    font-size: 1.6rem;
+    font-family: 'Roboto Slab'; 
 }
 
 /* NAV STYLES */
@@ -50,7 +72,19 @@ h2 {
         display: grid;
         justify-items: center;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 2rem 6rem;
+        grid-template-areas:
+            "inf inf"
+            "img btn";
+        background-color: #D9D9E0;
+    }
+
+    .hdr-nav {
+        position: fixed;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2rem 6rem auto;
         grid-template-areas:
             "inf inf"
             "img btn"
@@ -58,16 +92,7 @@ h2 {
         background-color: #D9D9E0;
     }
 
-    .nav-ph {
-        grid-area: nav;
-        height: 8px;
-    }
-
-    .nav-ph-hide {
-        display: none;
-    }
-
-    .nav-list {
+    .nav-list li {
         display: none;
     }
 
@@ -88,22 +113,11 @@ h2 {
         background-image: url(../media/DoorMenu.svg);
         background-size: cover;
         background-repeat: no-repeat;
-        width: 5rem;
-        height: 5rem;
-        align-self: center;
-        justify-self: center;
-        transition: .3s;
-    }
-
-    .nav-btn img {
-        width: 5rem;
-    }
-
-    .nav-btn-ln {
-        background-color: #2E3192;
-        height: .4rem;
         width: 4rem;
-        margin: .4rem;
+        height: 4rem;
+        align-self: center;
+        justify-self: end;
+        margin-right: 1rem;
     }
 
     .nav-btn-on {
@@ -111,21 +125,42 @@ h2 {
         background-image: url(../media/DoorMenuOpen.svg);
         background-size: cover;
         background-repeat: no-repeat;
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
         align-self: center;
-        justify-self: center;
-        transition: .3s;
+        justify-self: end;
+        margin-right: 1rem;
     }
 
     .hdr-info {
         grid-area: inf;
         background-color: #AAAAB6;
+        height: auto;
         min-width: 100vw;
         text-align: center;
         font-size: 1.3rem;
-        padding-top: .4rem;
-        padding-bottom: .2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-item {
+        padding: 1rem;
+        list-style: none;
+        flex: none;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .nav-item-closed {
+        display: none;
+    }
+
+    .hdr-brand {
+        justify-self: start;
+        align-self: center;
+        margin-left: 1rem;
     }
 }
 
@@ -136,15 +171,6 @@ h2 {
     flex-direction: row;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-list-mob li {
-    padding: 1rem;
-    list-style: none;
-    flex: none;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -163,6 +189,49 @@ h2 {
     transition: .3s;
     border-bottom: 4px solid #2E3192;
     border-top: 4px solid #2E3192;
+}
+
+/* HERO STYLES */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../media/cathedral.webp");
+    background-size: cover;
+    min-height: 50rem;
+}
+
+.hero h3 {
+    text-align: center;
+    color: white;
+    text-shadow: .1rem .1rem black;
+    font-size: 1.8rem;
+}
+
+.hero p {
+    text-align: center;
+    color: white;
+    text-shadow: .1rem .1rem black;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    .hero {
+        background-image: url("../media/cathedral-mob.webp");
+        background-position: left 100% bottom 100%;
+        align-items: flex-end;
+    }
+
+    .hero-txt {
+        margin-bottom: 8rem;
+        background-color: #AAAAB699;
+    }
+
+
+
 }
 
 /* BODY STYLES */
@@ -184,6 +253,7 @@ body {
 
 .main-body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -192,10 +262,13 @@ body {
 /* min-height here hides footer in mobile menu */
 .site-body {
     min-height: 100%;
+    background-color: #F0F0F8;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 9.8rem;
+    margin-top: 8rem;
+    padding-bottom: 4rem;
 }
 
 .main-body-hide {
@@ -204,8 +277,8 @@ body {
 
 /* IMAGE STYLES */
 
-.hdr-img {
-    padding-top: 1rem;
+.logo {
+    max-width: 90vw;
 }
 
 /* CONTENT BOXES */
@@ -338,7 +411,7 @@ body {
 }
 
 .cb-img img {
-    max-width: 95%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -351,6 +424,10 @@ body {
 .cb-txt {
     grid-area: txt;
     text-align: center;
+    max-width: 100%;
+}
+
+.cb-txt p {
     padding: 1rem;
 }
 
@@ -361,11 +438,13 @@ body {
 .cb-img-hd {
     grid-area: img-hd;
     text-align: center;
+    padding: 1rem;
 }
 
 .cb-txt-hd {
     grid-area: txt-hd;
     text-align: center;
+    padding: 1rem;
 }
 
 /* FOOTER */
@@ -373,6 +452,7 @@ body {
 .ft-main {
     justify-self: flex-end;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 1rem;
     background-color: #D9D9E0;
@@ -388,4 +468,10 @@ body {
     grid-gap: 30px;
     max-width: 100%;
     justify-items: center;
+    align-items: center;
+}
+
+.disclaimer {
+    font-size: .8rem;
+    text-align: center;
 }

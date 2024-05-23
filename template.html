@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Don Dor > Home</title>
+    <link href="styles/ddi-style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="content-wrap">
+
+        <!-- HEADER STARTS HERE -->
+
+        <header class="hdr" id="hdr">
+            <div class="hdr-info">
+                CALL 651-702-0984 FOR SERVICE
+            </div>
+            <div class="hdr-brand" id="hdr-brand">
+                <h1>Don Dor</h1>
+            </div>
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-item"><a href="index.html">HOME</a></li>
+                <li class="nav-item"><a href="doors.html">GARAGE DOORS</a></li>
+                <li class="nav-item"><a href="openers.html">OPENERS</a></li>
+            </ul>
+            <div class="nav-ph" id="nav-ph"></div>
+            <div class="nav-btn" id="nav-btn">
+            </div>
+        </header>
+
+        <!-- MAIN STARTS HERE -->
+
+        <main class="site-body" id="site-body">
+            <div class="main-body" id="main-body">
+                <!-- BODY START -->
+
+
+                <!-- BODY END -->
+            </div>
+        </main>
+
+        <!-- FOOTER STARTS HERE -->
+
+        <footer class="ft-main">
+            <div class="ft-body">
+                <div class="ft-name">
+                    DON DOR INC
+                </div>
+                <div class="ft-loc">
+                    OAKDALE, MN
+                </div>
+                <div class="ft-ph">
+                    651-702-0984
+                </div>
+                <div class="ft-email">
+                    <a href="mailto:DONDORINC@GMAIL.COM">DONDORINC@GMAIL.COM</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+</body>
+
+<!-- SCRIPTS START HERE -->
+
+<script>
+    const navButton = document.getElementById("nav-btn");
+
+    function mobileLayout() {
+        var mobileNav = document.getElementById("nav-list");
+        var mainBody = document.getElementById("main-body");
+        var navBtn = document.getElementById("nav-btn");
+        var navPh = document.getElementById("nav-ph");
+        var hdrNav = document.getElementById("hdr");
+
+        if (mainBody.className === "main-body") {
+            mainBody.className = "main-body-hide";
+        } else {
+            mainBody.className = "main-body";
+        };
+
+        if (mobileNav.className === "nav-list") {
+            mobileNav.className = "nav-list-mob";
+        } else {
+            mobileNav.className = "nav-list";
+        };
+
+        if (navBtn.className === "nav-btn") {
+            navBtn.className = "nav-btn-on";
+        } else {
+            navBtn.className = "nav-btn";
+        };
+
+        if (navPh.className === "nav-ph") {
+            navPh.className = "nav-ph-hide";
+        } else {
+            navPh.className = "nav-ph";
+        };
+
+        if (hdrNav.className === "hdr") {
+            hdrNav.className = "hdr-nav";
+        } else {
+            hdrNav.className = "hdr";
+        };
+    };
+
+    navButton.addEventListener("click", () => {
+        mobileLayout()
+    });
+
+</script>
+
+</html>
