@@ -83,7 +83,7 @@ h4 {
         position: fixed;
         display: grid;
         justify-items: center;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
         grid-template-rows: 2rem 6rem auto;
         grid-template-areas:
             "inf inf"
