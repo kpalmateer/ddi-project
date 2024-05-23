@@ -53,6 +53,12 @@ h4 {
     font-family: 'Roboto Slab'; 
 }
 
+h5 {
+    color: #2E3192;
+    font-size: 1.2rem;
+    font-family: 'Roboto Slab';
+}
+
 /* NAV STYLES */
 
 .nav-list {
