@@ -15,7 +15,7 @@ AAAAB6 - MD GRAY
     position: fixed;
     display: grid;
     justify-items: center;
-    min-width: 100vw;
+    min-width: 100%;
     grid-template-columns: auto auto;
     grid-template-rows: 2rem 6rem;
     grid-template-areas:
@@ -221,7 +221,6 @@ h6 {
 }
 
 .nav-list a:hover {
-    padding-top: 6px;
     transition: .3s;
     border-bottom: 4px solid #2E3192;
     border-top: 4px solid #2E3192;
@@ -329,6 +328,40 @@ body {
     max-width: 90%;
 }
 
+.door-after {
+    background-image: url(../media/After.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 900px;
+    height: 600px;
+    transition: 1s;
+}
+
+.door-after:active {
+    background-image: url(../media/Before.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 900px;
+    height: 600px;
+    transition: 1s;
+}
+
+@media screen and (max-width: 800px) {
+    .door-after {
+        width: 12rem;
+        height: 9rem;
+        background-size: contain;
+    }
+
+    .door-after:active {
+        background-size: contain;
+        width: 12rem;
+        height: 9rem;
+    }
+}
+
 /* CONTENT BOXES */
 
 .cb {
@@ -349,8 +382,8 @@ body {
         display: grid;
         justify-items: center;
         align-content: center;
-        grid-template-columns: minmax(auto, 1fr);
-        grid-template-rows: auto 1fr auto;
+        grid-template-columns: minmax(1fr, 2fr);
+        grid-template-rows: auto auto auto;
         grid-template-areas:
             "cb-hd"
             "cb-l"
@@ -406,7 +439,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #D9D9E0;
-    min-width: 100vw;
+    min-width: 100%;
     padding-top: 4rem;
 }
 
