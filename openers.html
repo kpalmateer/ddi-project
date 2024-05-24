@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en-US">
 
@@ -7,6 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Don Dor > Home</title>
+    <link rel="icon" href="media/DonDorFavicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
     <link href="styles/ddi-style.css" rel="stylesheet" />
 </head>
 
@@ -18,45 +22,63 @@
 
         <!-- HEADER STARTS HERE -->
 
-        <header class="hdr">
+        <header class="hdr" id="hdr">
             <div class="hdr-info">
-                CALL 651-702-0984 FOR SERVICE
+                <h5>CALL 651-702-0984 FOR SERVICE</h5>
             </div>
-            <div class="hdr-img" id="hdr-img">
-                <img alt="logo" src="media/DonDorLogoPlain.svg" width="100">
+            <div class="hdr-brand" id="hdr-brand">
+                <h3 class="hdr-name">Don Dor</h3>
             </div>
             <ul class="nav-list" id="nav-list">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="doors.html">GARAGE DOORS</a></li>
-                <li><a href="openers.html">OPENERS</a></li>
+                <li class="nav-item"><a href="index.html">HOME</a></li>
+                <li class="nav-item"><a href="doors.html">GARAGE DOORS</a></li>
+                <li class="nav-item"><a href="openers.html">OPENERS</a></li>
             </ul>
             <div class="nav-ph" id="nav-ph"></div>
             <div class="nav-btn" id="nav-btn">
-                <span class="nav-btn-ln" id="nav-btn-ln"></span>
-                <span class="nav-btn-ln" id="nav-btn-ln"></span>
-                <span class="nav-btn-ln" id="nav-btn-ln"></span>
             </div>
         </header>
 
         <!-- MAIN STARTS HERE -->
 
         <main class="site-body" id="site-body">
+
+            <!-- INSERT NON-TEMPLATE CONTENT HERE -->
+
             <div class="main-body" id="main-body">
-              <div class="cb-bizarro-no-img-hd">
-                <div class="cb-txt-hd">
-                  LiftMaster Openers
+
+
+                <div class="cb">
+
+                    <div class="cb-hd">
+                        <h3 class="h3-r">LiftMaster Openers</h3>
+                    </div>
+
+                    <div class="cb-l">
+
+                        <p>With LiftMaster's <a href="https://www.liftmaster.com/myq">myQ</a> connected openers, you can
+                            use your smartphone to control your garage door even when you're away from home. Never again
+                            will you have to wonder, "did I remember to close the garage door?"</p>
+                        <p>You can even keep your packages safe using <a
+                                href="https://www.myq.com/solutions/amazon-key">Amazon Key
+                                In-Garage Delivery</a>.</p>
+                        <a href="https://www.liftmaster.com/"><img src="media/LiftMasterLogo.svg" alt="LiftMaster logo"
+                                class="logo"></a>
+                    </div>
+
+                    <div class="cb-r">
+                        <p>Our offering of LiftMaster openers combine modern smart-enabled technology and time-tested
+                            reliability.</p>
+                        <p>Visit the LiftMaster site below to view their full product line.</p>
+                        <img src="media/LiftMasterOpener.webp" alt="LiftMaster opener">
+                    </div>
+
                 </div>
-                <div class="cb-txt">
-                  <p>We offer LiftMaster openers, featuring Amazon's new Amazon Key In-Garage Delivery. Call for a quote or more
-                    information.</p>
-                </div>
-                <div class="cb-img">
-                </div>
-                <div class="cb-img">
-                  <a href="https://www.liftmaster.com/"><img src="media/LiftMasterLogo.svg" alt="LiftMaster logo"></a>
-                </div>
-              </div>
+
             </div>
+
+            <!-- END NON-TEMPLATE  CONTENT -->
+
         </main>
 
         <!-- FOOTER STARTS HERE -->
@@ -64,17 +86,22 @@
         <footer class="ft-main">
             <div class="ft-body">
                 <div class="ft-name">
-                    DON DOR INC
+                    <h4>Don Dor Inc</h4>
+                    <p><a href="https://maps.app.goo.gl/KW2vnzyDoQQ72BkTA">Oakdale, MN</a></p>
+                    <p>MN Lic. # BC20385810</p>
                 </div>
-                <div class="ft-loc">
-                    OAKDALE, MN
+                <div class="ft-ctct">
+                    <h5>Contact us:</h5>
                 </div>
-                <div class="ft-ph">
-                    651-702-0984
+                <div class="ft-num">
+                    <h6>Ph:</h6>&nbsp;<p>651-702-0984</p>
                 </div>
                 <div class="ft-email">
-                    <a href="mailto:DONDORINC@GMAIL.COM">DONDORINC@GMAIL.COM</a>
+                    <h6>Em:</h6>&nbsp;<p><a href="mailto:DONDORINC@GMAIL.COM">dondorinc@gmail.com</a></p>
                 </div>
+            </div>
+            <div class="ft-disc">
+                <p class="disclaimer">© Don Dor Inc 2024</p>
             </div>
         </footer>
     </div>
@@ -91,6 +118,7 @@
         var mainBody = document.getElementById("main-body");
         var navBtn = document.getElementById("nav-btn");
         var navPh = document.getElementById("nav-ph");
+        var hdrNav = document.getElementById("hdr");
 
         if (mainBody.className === "main-body") {
             mainBody.className = "main-body-hide";
@@ -109,10 +137,17 @@
         } else {
             navBtn.className = "nav-btn";
         };
+
         if (navPh.className === "nav-ph") {
             navPh.className = "nav-ph-hide";
         } else {
             navPh.className = "nav-ph";
+        };
+
+        if (hdrNav.className === "hdr") {
+            hdrNav.className = "hdr-nav";
+        } else {
+            hdrNav.className = "hdr";
         };
     };
 
