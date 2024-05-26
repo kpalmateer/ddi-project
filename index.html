@@ -102,6 +102,7 @@
 
                 </div>
 
+                <!-- TODO clean this CB and image slider up -->
                 <div class="cb">
 
                     <div class="cb-hd">
@@ -109,16 +110,24 @@
                     </div>
                 
                     <div class="cb-l">
-                        <p>A new door can be a great way to add curb appeal and update the look of your home. Tap and hold on the image to see a before shot.</p>
+                        <p>A new door can be a great way to add curb appeal and update the look of your home. Swipe the image for a comparison.</p>
                     </div>
                 
                     <div class="cb-r">
-                        <div class="door-after" id="before-after"></div>
+
                     </div>
                 
                 </div>
 
-
+                <div class="img-slider" id="img-slider">
+                    <img id="before-img" src="media/Before.webp" alt="Before">
+                    <div class="after-wrapper" id="after-wrapper">
+                        <img id="after-img" src="media/After.webp" alt="After">
+                    </div>
+                    <div class="slider" id="slider">
+                        <div class="slider-line"></div>
+                    </div>
+                </div>
 
             </div>
 
@@ -199,6 +208,51 @@
     navButton.addEventListener("click", () => {
         mobileLayout()
     });
+
+    // image slider
+    const slider = document.getElementById("img-slider");
+    const afterWrapper = document.getElementById("after-wrapper");
+    const sliderLine = document.getElementById("slider")
+
+    slider.addEventListener("mousemove", sliderMove);
+    slider.addEventListener("touchmove", sliderMove);
+
+    function sliderMove(event) {
+        if (sliderLocked) return;
+
+        const sliderPos = slider.offsetLeft;
+        const imgWidth = slider.clientWidth;
+        const sliderWidth = sliderLine.clientWidth;
+
+        let mousePos = (event.clientX || event.touches[0].clientX) - sliderPos;
+
+        if (mousePos < 0) mousePos = 0;
+        else if (mousePos > imgWidth) mousePos = imgWidth;
+
+        afterWrapper.style.width = `${((1 - mousePos / imgWidth) * 100).toFixed(4)}%`;
+        sliderLine.style.left = `calc(${((mousePos / imgWidth) * 100).toFixed(4)}% - ${sliderWidth /2}px)`;
+    }
+
+    let sliderLocked = false;
+
+    slider.addEventListener("mousedown", sliderMouseDown);
+    slider.addEventListener("touchstart", sliderMouseDown);
+    slider.addEventListener("mouseup", sliderMouseUp);
+    slider.addEventListener("touchend", sliderMouseUp);
+    slider.addEventListener("mouseleave", sliderMouseLeave);
+
+    function sliderMouseDown(event) {
+        if (sliderLocked) sliderLocked = false;
+        sliderMove(event);
+    }
+
+    function sliderMouseUp() {
+        if (!sliderLocked) sliderLocked = true;
+    }
+
+    function sliderMouseLeave() {
+        if (sliderLocked) sliderLocked = false;
+    }
 
 </script>
 

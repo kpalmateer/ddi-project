@@ -11,6 +11,10 @@ AAAAB6 - MD GRAY
 
 /* HEADER STYLES */
 
+:root {
+    --slider-width: min(80vw, 1050px);
+}
+
 .hdr {
     position: fixed;
     display: grid;
@@ -22,6 +26,7 @@ AAAAB6 - MD GRAY
         "inf inf"
         "brand nav";
     background-color: #D9D9E0;
+    z-index: 5;
 }
 
 .hdr-info {
@@ -328,24 +333,61 @@ body {
     max-width: 90%;
 }
 
-.door-after {
-    background-image: url(../media/After.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 900px;
-    height: 600px;
-    transition: 1s;
+/* IMAGE SLIDER */
+
+.img-slider {
+    position: relative;
+    width: var(--slider-width);
+    overflow: hidden;
+    cursor: col-resize;
 }
 
-.door-after:active {
-    background-image: url(../media/Before.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 900px;
-    height: 600px;
-    transition: 1s;
+.img-slider img {
+    display: block;
+    width: var(--slider-width);
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+}
+
+.after-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.after-wrapper img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-width: var(--slider-width);
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: calc(50% - (50px)/2);
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 2;
+}
+
+.slider-line {
+    width: 4px;
+    flex-grow: 1;
+    background-color: white;
 }
 
 @media screen and (max-width: 800px) {
@@ -360,6 +402,11 @@ body {
         width: 12rem;
         height: 9rem;
     }
+
+    :root {
+        --slider-width: 90vw;
+    }
+
 }
 
 /* CONTENT BOXES */
@@ -441,6 +488,7 @@ body {
     background-color: #D9D9E0;
     min-width: 100%;
     padding-top: 4rem;
+    z-index: 5;
 }
 
 
