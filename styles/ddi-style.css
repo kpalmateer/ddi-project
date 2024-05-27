@@ -13,13 +13,19 @@ AAAAB6 - MD GRAY
 
 :root {
     --slider-width: min(80vw, 1050px);
+    --md-bl-gray: #9596BA;
+    --lt-bl-gray: #B2B3CC;
+    --lt-gray: #F0F0F8;
+    --md-lt-gray: #D9D9E0;
+    --md-gray: #AAAAB6;
+    --dk-gray: #9595A2;
 }
 
 .hdr {
     position: fixed;
     display: grid;
     justify-items: center;
-    min-width: 100%;
+    width: 100%;
     grid-template-columns: auto auto;
     grid-template-rows: 4rem 6rem;
     grid-template-areas:
@@ -145,36 +151,6 @@ h6 {
     border-top: 4px solid #2E3192;
 }
 
-/* HERO STYLES */
-
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("../media/cathedral.webp");
-    background-size: cover;
-    min-height: 50rem;
-}
-
-.hero h3 {
-    text-align: center;
-    color: white;
-    text-shadow: .1rem .1rem black;
-    font-size: 1.8rem;
-}
-
-.hero p {
-    text-align: center;
-    color: white;
-    text-shadow: .1rem .1rem black;
-    font-size: 1.2rem;
-    padding: .5rem;
-}
-
-.hero-txt {
-    background-color: #AAAAB699;
-}
-
 /* BODY STYLES */
 
 body {
@@ -191,6 +167,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .main-body {
@@ -292,8 +269,7 @@ body {
 /* CONTENT BOXES */
 
 .cb {
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: minmax(1fr, 2fr);
     grid-template-rows: auto auto;
@@ -455,6 +431,13 @@ body {
     display: none;
 }
 
+@media screen and (min-width: 1600px) {
+    .content-wrap {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .ft-body {
         display: grid;
@@ -547,17 +530,6 @@ body {
         text-align: center;
     }
 
-    .hero {
-        background-image: url("../media/cathedral-mob.webp");
-        background-position: left 100% bottom 100%;
-        align-items: flex-end;
-    }
-
-    .hero-txt {
-        margin-bottom: 8rem;
-        background-color: #AAAAB699;
-    }
-
     h2 {
         font-size: 1.8rem
     }
@@ -569,7 +541,6 @@ body {
     h5 {
         font-size: 1.4rem;
     }
-
 
     .hdr {
         position: fixed;
