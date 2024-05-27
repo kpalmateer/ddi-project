@@ -11,10 +11,6 @@ AAAAB6 - MD GRAY
 
 /* HEADER STYLES */
 
-* {
-    border: 1px solid red;
-}
-
 :root {
     --slider-width: min(80vw, 1050px);
 }
