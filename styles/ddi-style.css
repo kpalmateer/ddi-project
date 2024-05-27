@@ -490,6 +490,11 @@ body {
         padding-right: 0rem;
     }
 
+    .cb-r p {
+        padding: 0;
+        margin: 1rem;
+    }
+
     .cb-l {
         justify-content: flex-start;
         padding-left: 0rem;
@@ -497,8 +502,15 @@ body {
         margin-right: .5rem;
     }
 
+    .cb-l p {
+        padding: 0;
+        margin: 1rem;
+    }
+
     .cb-hd {
         padding: 0rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     .cb-hd h2 {
