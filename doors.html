@@ -46,25 +46,39 @@
             <!-- INSERT NON-TEMPLATE CONTENT HERE -->
 
             <div class="main-body" id="main-body">
-              <div class="cb">
+                <div class="cb">
 
-                  <div class="cb-hd">
-                      <h3 class="h3-l">Clopay Garage Doors</h3>
-                  </div>
+                    <div class="cb-hd">
+                        <h2 class="h2-l">Clopay Garage Doors</h2>
+                    </div>
 
-                  <div class="cb-l">
-                      <p>As an authorized Clopay dealer, we've got something to transform any home or business.
-                          Contact us today for a free quote.</p>
-                      <img src="media/DoorBrown.webp" alt="Clopay garage door">
-                  </div>
+                    <div class="cb-l">
+                        <a href="https://www.clopaydoor.com/"><img src="media/ClopayLogo.svg" alt="Clopay logo"
+                            class="logo"></a>
+                    </div>
 
-                  <div class="cb-r">
-                      <p>Visit the Clopay website below to view their products.</p>
-                      <a href="https://www.clopaydoor.com/"><img src="media/ClopayLogo.svg" alt="Clopay logo"
-                              class="logo"></a>
-                  </div>
+                    <div class="cb-r">
+                        <p>As an authorized Clopay dealer, we've got something to transform any home or business.
+                            Contact us today for a free quote.</p>
+                    </div>
 
-              </div>
+                </div>
+
+                <div class="cb">
+
+                    <div class="cb-hd">
+                        <h3 class="h3-r">A new look for your home</h3>
+                    </div>
+
+                    <div class="cb-l">
+                        <p>Visit the Clopay website to view their products.</p>
+                    </div>
+
+                    <div class="cb-r">
+                        <img src="media/DoorBrown.webp" alt="Clopay garage door">
+                    </div>
+
+                </div>
             </div>
 
             <!-- END NON-TEMPLATE  CONTENT -->
@@ -99,52 +113,9 @@
 </body>
 
 <!-- SCRIPTS START HERE -->
-
-<script>
-    const navButton = document.getElementById("nav-btn");
-
-    function mobileLayout() {
-        var mobileNav = document.getElementById("nav-list");
-        var mainBody = document.getElementById("main-body");
-        var navBtn = document.getElementById("nav-btn");
-        var navPh = document.getElementById("nav-ph");
-        var hdrNav = document.getElementById("hdr");
-
-        if (mainBody.className === "main-body") {
-            mainBody.className = "main-body-hide";
-        } else {
-            mainBody.className = "main-body";
-        };
-
-        if (mobileNav.className === "nav-list") {
-            mobileNav.className = "nav-list-mob";
-        } else {
-            mobileNav.className = "nav-list";
-        };
-
-        if (navBtn.className === "nav-btn") {
-            navBtn.className = "nav-btn-on";
-        } else {
-            navBtn.className = "nav-btn";
-        };
-
-        if (navPh.className === "nav-ph") {
-            navPh.className = "nav-ph-hide";
-        } else {
-            navPh.className = "nav-ph";
-        };
-
-        if (hdrNav.className === "hdr") {
-            hdrNav.className = "hdr-nav";
-        } else {
-            hdrNav.className = "hdr";
-        };
-    };
-
-    navButton.addEventListener("click", () => {
-        mobileLayout()
-    });
-
+<script src="scripts/ddi-scripts.js">
+    
 </script>
+
 
 </html>

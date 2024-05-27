@@ -47,32 +47,42 @@
 
             <div class="main-body" id="main-body">
 
-
                 <div class="cb">
 
                     <div class="cb-hd">
-                        <h3 class="h3-r">LiftMaster Openers</h3>
+                        <h2 class="h2-l">LiftMaster Openers</h2>
                     </div>
 
                     <div class="cb-l">
-
-                        <p>With LiftMaster's <a href="https://www.liftmaster.com/myq">myQ</a> connected openers, you can
-                            use your smartphone to control your garage door even when you're away from home. Never again
-                            will you have to wonder, "did I remember to close the garage door?"</p>
-                        <p>You can even keep your packages safe using <a
-                                href="https://www.myq.com/solutions/amazon-key">Amazon Key
-                                In-Garage Delivery</a>.</p>
-                        <a href="https://www.liftmaster.com/"><img src="media/LiftMasterLogo.svg" alt="LiftMaster logo"
-                                class="logo"></a>
+                        <a href="https://www.liftmaster.com/"><img src="media/LiftMasterLogo.svg" alt="LiftMaster logo" class="logo"></a> 
                     </div>
 
                     <div class="cb-r">
                         <p>Our offering of LiftMaster openers combine modern smart-enabled technology and time-tested
                             reliability.</p>
                         <p>Visit the LiftMaster site below to view their full product line.</p>
-                        <img src="media/LiftMasterOpener.webp" alt="LiftMaster opener">
                     </div>
 
+                </div>
+
+                <div class="cb">
+
+                    <div class="cb-hd">
+                        <h3 class="h3-r">Welcome to the Smart Garage era</h3>
+                    </div>
+                    
+                    <div class="cb-l">
+                        <p>With LiftMaster's <a href="https://www.liftmaster.com/myq">myQ</a> connected openers, you can
+                            use your smartphone to control your garage door even when you're away from home. Never again
+                            will you have to wonder, "did I remember to close the garage door?"</p>
+                        <p>You can even keep your packages safe using <a href="https://www.myq.com/solutions/amazon-key">Amazon Key
+                                In-Garage Delivery</a>.</p>
+                    </div>
+                
+                    <div class="cb-r">
+                        <img src="media/LiftMasterOpener.webp" alt="LiftMaster opener">
+                    </div>
+                
                 </div>
 
             </div>
@@ -109,52 +119,9 @@
 </body>
 
 <!-- SCRIPTS START HERE -->
-
-<script>
-    const navButton = document.getElementById("nav-btn");
-
-    function mobileLayout() {
-        var mobileNav = document.getElementById("nav-list");
-        var mainBody = document.getElementById("main-body");
-        var navBtn = document.getElementById("nav-btn");
-        var navPh = document.getElementById("nav-ph");
-        var hdrNav = document.getElementById("hdr");
-
-        if (mainBody.className === "main-body") {
-            mainBody.className = "main-body-hide";
-        } else {
-            mainBody.className = "main-body";
-        };
-
-        if (mobileNav.className === "nav-list") {
-            mobileNav.className = "nav-list-mob";
-        } else {
-            mobileNav.className = "nav-list";
-        };
-
-        if (navBtn.className === "nav-btn") {
-            navBtn.className = "nav-btn-on";
-        } else {
-            navBtn.className = "nav-btn";
-        };
-
-        if (navPh.className === "nav-ph") {
-            navPh.className = "nav-ph-hide";
-        } else {
-            navPh.className = "nav-ph";
-        };
-
-        if (hdrNav.className === "hdr") {
-            hdrNav.className = "hdr-nav";
-        } else {
-            hdrNav.className = "hdr";
-        };
-    };
-
-    navButton.addEventListener("click", () => {
-        mobileLayout()
-    });
-
+<script src="scripts/ddi-scripts.js">
+    
 </script>
+
 
 </html>

@@ -21,7 +21,7 @@ AAAAB6 - MD GRAY
     justify-items: center;
     min-width: 100%;
     grid-template-columns: auto auto;
-    grid-template-rows: 2rem 6rem;
+    grid-template-rows: 4rem 6rem;
     grid-template-areas:
         "inf inf"
         "brand nav";
@@ -32,10 +32,10 @@ AAAAB6 - MD GRAY
 .hdr-info {
     grid-area: inf;
     background-color: #AAAAB6;
-    height: auto;
+    height: 4rem;
     min-width: 100vw;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +57,18 @@ h1 {
 
 h2 {
     color: #2E3192;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
+    font-family: 'Roboto Slab';
+}
+
+.h2-l {
+    text-align: left;
+    align-self: left;
+}
+
+.h2-r {
+    text-align: right;
+    align-self: right;
 }
 
 h3 {
@@ -68,10 +79,12 @@ h3 {
 
 .h3-l {
     text-align: left;
+    align-self: flex-start;
 }
 
 .h3-r {
     text-align: right;
+    align-self: right;
 }
 
 h4 {
@@ -82,7 +95,7 @@ h4 {
 
 h5 {
     color: #2E3192;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-family: 'Roboto Slab';
 }
 
@@ -104,105 +117,6 @@ h6 {
     margin: 0;
     min-width: 100%;
     padding: 0;
-}
-
-@media screen and (max-width: 800px) {
-
-    .hdr {
-        position: fixed;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: auto auto;
-        grid-template-rows: 2rem 6rem;
-        grid-template-areas:
-            "inf inf"
-            "brand btn";
-        background-color: #D9D9E0;
-    }
-
-    .hdr-nav {
-        position: fixed;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: auto auto;
-        grid-template-rows: 2rem 6rem auto;
-        grid-template-areas:
-            "inf inf"
-            "brand btn"
-            "nav nav";
-        background-color: #D9D9E0;
-    }
-
-    .nav-list li {
-        display: none;
-    }
-
-    .nav-list-mob {
-        grid-area: nav;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background-color: #D9D9E0;
-        width: 100vw;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav-btn {
-        grid-area: btn;
-        background-image: url(../media/DoorMenu.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 4rem;
-        height: 4rem;
-        align-self: center;
-        justify-self: end;
-        margin-right: 1rem;
-    }
-
-    .nav-btn-on {
-        grid-area: btn;
-        background-image: url(../media/DoorMenuOpen.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 4rem;
-        height: 4rem;
-        align-self: center;
-        justify-self: end;
-        margin-right: 1rem;
-    }
-
-    .hdr-info {
-        grid-area: inf;
-        background-color: #AAAAB6;
-        height: auto;
-        min-width: 100vw;
-        text-align: center;
-        font-size: 1.3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav-item {
-        padding: 1rem;
-        list-style: none;
-        flex: none;
-        font-family: 'Inter', Arial, Helvetica, sans-serif;
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
-
-    .nav-item-closed {
-        display: none;
-    }
-
-    .hdr-brand {
-        justify-self: start;
-        align-self: center;
-        margin-left: 1rem;
-    }
 }
 
 .nav-list li {
@@ -261,23 +175,6 @@ h6 {
     background-color: #AAAAB699;
 }
 
-@media screen and (max-width: 800px) {
-
-    .hero {
-        background-image: url("../media/cathedral-mob.webp");
-        background-position: left 100% bottom 100%;
-        align-items: flex-end;
-    }
-
-    .hero-txt {
-        margin-bottom: 8rem;
-        background-color: #AAAAB699;
-    }
-
-
-
-}
-
 /* BODY STYLES */
 
 body {
@@ -297,6 +194,9 @@ body {
 }
 
 .main-body {
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -306,21 +206,15 @@ body {
 /* TODO */
 /* min-height here hides footer in mobile menu */
 .site-body {
-    min-height: 100%;
-    max-width: 90%;
+    min-height: 60vh;
+    max-width: 100%;
     background-color: #F0F0F8;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 10rem;
     padding-bottom: 4rem;
-}
-
-@media screen and (max-width: 800px) {
-    .site-body {
-        max-width: 100%;
-    }
 }
 
 .main-body-hide {
@@ -334,6 +228,10 @@ body {
 }
 
 /* IMAGE SLIDER */
+
+.slider-wrapper h2 {
+    text-align: center;
+    }
 
 .img-slider {
     position: relative;
@@ -390,29 +288,11 @@ body {
     background-color: white;
 }
 
-@media screen and (max-width: 800px) {
-    .door-after {
-        width: 12rem;
-        height: 9rem;
-        background-size: contain;
-    }
-
-    .door-after:active {
-        background-size: contain;
-        width: 12rem;
-        height: 9rem;
-    }
-
-    :root {
-        --slider-width: 90vw;
-    }
-
-}
-
 /* CONTENT BOXES */
 
 .cb {
-    max-width: 80rem;
+    min-width: 100%;
+    max-width: 100%;
     display: grid;
     grid-template-columns: minmax(1fr, 2fr);
     grid-template-rows: auto auto;
@@ -423,30 +303,14 @@ body {
     background-color: #F0F0F8;
 }
 
-@media screen and (max-width: 800px) {
-    .cb {
-        min-width: 100%;
-        display: grid;
-        justify-items: center;
-        align-content: center;
-        grid-template-columns: minmax(1fr, 2fr);
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "cb-hd"
-            "cb-l"
-            "cb-r";
-        grid-gap: 20px;
-        background-color: #F0F0F8;
-    }
-}
-
 .cb-l {
     display: flex;
     flex-direction: column;
     grid-area: cb-l;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
+    padding-left: 2rem;
 }
 
 .cb-l p {
@@ -462,8 +326,9 @@ body {
     flex-direction: column;
     grid-area: cb-r;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
+    padding-right: 2rem;
 }
 
 .cb-r p {
@@ -477,6 +342,9 @@ body {
 .cb-hd {
     grid-area: cb-hd;
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* FOOTER */
@@ -487,7 +355,7 @@ body {
     flex-direction: column;
     background-color: #D9D9E0;
     min-width: 100%;
-    padding-top: 4rem;
+    margin-top: 4rem;
     z-index: 5;
 }
 
@@ -503,24 +371,6 @@ body {
     justify-items: center;
     align-items: center;
     min-width: 80%;
-}
-
-@media screen and (max-width: 800px) {
-    .ft-body {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: 1fr auto;
-        grid-template-areas:
-            "name"
-            "ctct"
-            "num"
-            "email";
-        grid-gap: 10px;
-        max-width: 100%;
-        justify-items: center;
-        align-items: center;
-    }
-
 }
 
 .ft-name {
@@ -579,4 +429,253 @@ body {
 .disclaimer {
     font-size: .8rem;
     text-align: center;
+}
+
+#service-list {
+    width: 40vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 4rem;
+    font-size: 1.2rem;
+}
+
+#service-list li {
+    text-align: left;
+}
+
+#map-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+}
+
+#map-static {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .ft-body {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr auto;
+        grid-template-areas:
+            "name"
+            "ctct"
+            "num"
+            "email";
+        grid-gap: 10px;
+        max-width: 100%;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .cb {
+        min-width: 100%;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        grid-template-columns: minmax(1fr, 2fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "cb-hd"
+            "cb-l"
+            "cb-r";
+        grid-gap: 20px;
+        background-color: #F0F0F8;
+    }
+
+    .cb-r {
+        justify-content: flex-start;
+        padding-right: 0rem;
+    }
+
+    .cb-l {
+        justify-content: flex-start;
+        padding-left: 0rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    .cb-hd {
+        padding: 0rem;
+    }
+
+    .cb-hd h2 {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .door-after {
+        width: 12rem;
+        height: 9rem;
+        background-size: contain;
+    }
+
+    .door-after:active {
+        background-size: contain;
+        width: 12rem;
+        height: 9rem;
+    }
+
+    :root {
+        --slider-width: 90vw;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: .5rem;
+    }
+
+    .slider-wrapper p {
+        text-align: center;
+    }
+
+    .hero {
+        background-image: url("../media/cathedral-mob.webp");
+        background-position: left 100% bottom 100%;
+        align-items: flex-end;
+    }
+
+    .hero-txt {
+        margin-bottom: 8rem;
+        background-color: #AAAAB699;
+    }
+
+    h2 {
+        font-size: 1.8rem
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+    }
+
+
+    .hdr {
+        position: fixed;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: auto auto;
+        grid-template-rows: 4rem 6rem;
+        grid-template-areas:
+            "inf inf"
+            "brand btn";
+        background-color: #D9D9E0;
+    }
+
+    .hdr-nav {
+        position: fixed;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: auto auto;
+        grid-template-rows: 4rem 6rem auto;
+        grid-template-areas:
+            "inf inf"
+            "brand btn"
+            "nav nav";
+        background-color: #D9D9E0;
+    }
+
+    .nav-list li {
+        display: none;
+    }
+
+    .nav-list-mob {
+        grid-area: nav;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #D9D9E0;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-btn {
+        grid-area: btn;
+        background-image: url(../media/DoorMenu.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 4rem;
+        height: 4rem;
+        align-self: center;
+        justify-self: end;
+        margin-right: 1rem;
+    }
+
+    .nav-btn-on {
+        grid-area: btn;
+        background-image: url(../media/DoorMenuOpen.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 4rem;
+        height: 4rem;
+        align-self: center;
+        justify-self: end;
+        margin-right: 1rem;
+    }
+
+    .hdr-info {
+        grid-area: inf;
+        background-color: #AAAAB6;
+        height: 4rem;
+        min-width: 100vw;
+        text-align: center;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-item {
+        padding: 1rem;
+        list-style: none;
+        flex: none;
+        font-family: 'Inter', Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .nav-item-closed {
+        display: none;
+    }
+
+    .hdr-brand {
+        justify-self: start;
+        align-self: center;
+        margin-left: 1rem;
+    }
+
+    #service-list {
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        align-items: start;
+    }
+
+    #service-list h3 {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #map-static {
+        display: inline;
+    }
+
+    #map-static img {
+        width: 95%;
+    }
+
+    #map {
+        display: none;
+    }
 }
