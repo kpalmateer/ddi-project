@@ -2,16 +2,9 @@ const navButton = document.getElementById("nav-btn");
 
 function mobileLayout() {
     var mobileNav = document.getElementById("nav-list");
-    var mainBody = document.getElementById("main-body");
     var navBtn = document.getElementById("nav-btn");
     var navPh = document.getElementById("nav-ph");
     var hdrNav = document.getElementById("hdr");
-
-    if (mainBody.className === "main-body") {
-        mainBody.className = "main-body-hide";
-    } else {
-        mainBody.className = "main-body";
-    };
 
     if (mobileNav.className === "nav-list") {
         mobileNav.className = "nav-list-mob";
