@@ -39,12 +39,12 @@
     
     .hero {
         background-image: url("../media/LiftMasterHeroMob.webp");
-        background-position: left 100% bottom 100%;
+        background-position: left 50% bottom 100%;
         align-items: flex-start;
     }
 
     .hero-txt {
-        margin-top: 8rem;
+        margin-top: 14rem;
         background-color: #AAAAB699;
     }
 
