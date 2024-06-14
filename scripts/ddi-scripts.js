@@ -3,7 +3,6 @@ const navButton = document.getElementById("nav-btn");
 function mobileLayout() {
     var mobileNav = document.getElementById("nav-list");
     var navBtn = document.getElementById("nav-btn");
-    var navPh = document.getElementById("nav-ph");
     var hdrNav = document.getElementById("hdr");
 
     if (mobileNav.className === "nav-list") {
@@ -16,12 +15,6 @@ function mobileLayout() {
         navBtn.className = "nav-btn-on";
     } else {
         navBtn.className = "nav-btn";
-    };
-
-    if (navPh.className === "nav-ph") {
-        navPh.className = "nav-ph-hide";
-    } else {
-        navPh.className = "nav-ph";
     };
 
     if (hdrNav.className === "hdr") {
